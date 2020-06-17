@@ -15,10 +15,10 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  region: "us-east-1"
-  app: "docker-react"
-  env: "DockerReact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-830663695860"
-  bucket_path: "docker-react"
+  region: "us-east-1" # AWS EB region
+  app: "docker-react" # AWS EB app name
+  env: "DockerReact-env" # AWS EB app anvironment name
+  bucket_name: "elasticbeanstalk-us-east-1-830663695860" # AWS S3 bucket created for EB
+  bucket_path: "docker-react" # AWS EB app name
   on:
     branch: master

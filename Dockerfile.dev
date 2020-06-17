@@ -7,6 +7,4 @@ RUN npm install
 
 COPY . .
 
-RUN echo "hello world"
-
 CMD ["npm", "run", "start"]

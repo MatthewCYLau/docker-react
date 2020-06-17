@@ -4,7 +4,9 @@ services:
   - docker
 
 before_install:
+  # specify your docker image tag name i.e. -t myimagename
   - docker build -t matlau/docker-react -f Dockerfile.dev .
 
 script:
+  # reference your docker image tag name
   - docker run -e CI=true matlau/docker-react npm run test -- --coverage

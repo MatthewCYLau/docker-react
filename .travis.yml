@@ -10,3 +10,15 @@ before_install:
 script:
   # reference your docker image tag name
   - docker run -e CI=true matlau/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-east-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-830663695860"
+  bucket_path: "docker-react"
+  on:
+    branch: master

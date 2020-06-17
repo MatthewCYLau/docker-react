@@ -2,13 +2,23 @@
 
 This is boilderplate reference project, which uses Docker, and Travis CI, to automationally build and deploy a React app onto AWS Elastic Beanstalk
 
-## Run Locally
+## Build/Run Locally
 
-To run locally, run the following command:
+To build the Docker image , run the following command:
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
+
+To run the app locally , run the following command:
+
+```bash
+docker-compose up # app runs unit tests, before starting at http://localhost:3000/
+```
+
+## Development Workflow
+
+TBC
 
 ## Contributing
 

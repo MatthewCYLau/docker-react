@@ -20,11 +20,15 @@ docker-compose up # app runs unit tests, before starting at http://localhost:300
 
 ## Deployment
 
-To deploy app onto AWS Elastic Beanstalk, do the following:
+- To deploy app onto AWS Elastic Beanstalk, do the following:
 
 1. Create an application on [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.CreateApp.html). Choose Docker as the platform
 2. Update `.travis.yml` Travis CI config file. See annotations on `.travis.yml`
 3. On Travis CI, define [environemnt variables](https://docs.travis-ci.com/user/environment-variables/)
+
+## FAQ
+
+- If AWS Elastic Beanstalk deployment fails, this could be due to an issue on AWS. See this [post](https://stackoverflow.com/questions/61518512/aws-elastic-beanstalk-docker-does-not-support-multi-stage-build) on a workaround which uses un-named builder for the Dockerfile
 
 ## Contributing
 
